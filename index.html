@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>백성윤 수리논술 특강 | 국희재수학</title>
+    <title>백성윤T 수리논술 특강 | 국희재수학</title>
     <style>
         @import url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@300;400;500;700;900&display=swap');
         
@@ -61,4 +61,105 @@
         /* Footer CTA */
         .cta-area { text-align: center; background: var(--d-navy); color: white; padding: 40px 20px; border-radius: 10px; }
         .cta-area p { font-size: 0.9em; margin: 8px 0; opacity: 0.9; }
-        .btn-apply { background: var(--d-gold); color: white; padding: 18px 40px; text-decoration: none; font-weight: 700; font-size: 1.1em; display: inline-block; margin-
+        .btn-apply { background: var(--d-gold); color: white; padding: 18px 40px; text-decoration: none; font-weight: 700; font-size: 1.1em; display: inline-block; margin-top: 25px; border-radius: 5px; transition: 0.3s; width: 80%; max-width: 300px; }
+        .btn-apply:hover { background: #a38950; }
+
+        /* Mobile Optimization */
+        @media (max-width: 768px) {
+            .container { padding: 30px 20px; }
+            .top-header h1 { font-size: 1.8em; }
+            
+            .profile-section { flex-direction: column; box-shadow: 0px 10px 20px rgba(0,0,0,0.1); }
+            .profile-img, .profile-info { width: 100%; }
+            .profile-info { padding: 30px 20px; }
+            
+            .info-summary, .strategy-grid { grid-template-columns: 1fr; }
+            
+            .strategy-item { padding: 15px; }
+            .curriculum-table .week { width: 60px; font-size: 0.85em; }
+            
+            .cta-area { padding: 40px 15px; }
+            .btn-apply { width: 100%; box-sizing: border-box; }
+        }
+    </style>
+</head>
+<body>
+
+<div class="container">
+    <header class="top-header">
+        <p class="institute">"상위권으로 가는 지름길" 국희재수학전문학원</p>
+        <h1>고3 수리논술 2월 4주 특강</h1>
+        <p class="subtitle">수능과는 다른 논술만의 '논리'를 완성합니다.</p>
+    </header>
+
+    <section class="profile-section">
+        <div class="profile-img"><img src="백윤성t.jpg" alt="백성윤 선생님"></div>
+        <div class="profile-info">
+            <div class="name">백성윤 <span>T</span></div>
+            <div class="tagline">빈틈없는 관리 & 확실한 성적 향상</div>
+            <ul class="career-list">
+                <li>• 연세대학교 의과대학</li>
+                <li>• <strong>연세대학교 의과대학 수리논술 2회 합격</strong></li>
+                <li>• 현) (주)국희재수학 수리논술 팀장</li>
+            </ul>
+        </div>
+    </section>
+
+    <section class="essay-importance">
+        <h2>왜 지금 수리논술인가?</h2>
+        <p>
+            수리논술은 상위권 대학 진학을 위한 <strong>'가장 강력한 역전 카드'</strong>입니다. 
+            단순히 답을 맞히는 수능 수학을 넘어, 출제자의 의도를 파악하고 정교하게 논증하는 능력이 합격을 결정짓습니다. 
+            교과 원리를 완벽히 내면화하여 논리적 서술의 기초를 닦아야 할 골든 타임입니다.
+        </p>
+    </section>
+
+    <h3 class="section-h3">수업 안내</h3>
+    <div class="info-summary">
+        <div class="info-card">
+            <strong>일시 및 범위</strong>
+            🚀 2월 개강 (매주 화 19:00 - 22:00)<br>
+            🚀 국희재수학 수완점(본관) 4층 <br>
+            🚀 범위: 수학Ⅰ + 수학Ⅱ 핵심 테마
+        </div>
+        <div class="info-card">
+            <strong>학습 자료</strong>
+            이론 정리 및 필기 공간이 포함된 전용 워크북<br>
+            (수업 전주 배포 원칙 / 1회차는 당일 배포)
+        </div>
+    </div>
+
+    <h3 class="section-h3">3단계 밀착 시스템</h3>
+    <div class="strategy-grid">
+        <div class="strategy-item">
+            <h4>1. 실전 테스트 & 피드백</h4>
+            <p>매주 1시간 테스트 진행. 우수 사례와 보완 사례를 대조하며 현장에서 즉각적인 방향성을 제시합니다.</p>
+        </div>
+        <div class="strategy-item">
+            <h4>2. 원리 중심 이론 강의</h4>
+            <p>단순 암기가 아닌, 논리적 증명 과정의 빈틈을 채우는 필기 중심의 심화 이론 수업입니다.</p>
+        </div>
+        <div class="strategy-item">
+            <h4>3. 비대면 1:1 화상 첨삭</h4>
+            <p>백성윤T가 직접 진행하는 개인별 맞춤 교정. Google Meet을(온라인 첨삭) 통해 문항별 정밀 피드백이 이루어집니다.</p>
+        </div>
+    </div>
+
+    <h3 class="section-h3">4주 커리큘럼</h3>
+    <table class="curriculum-table">
+        <tr><td class="week">1회차</td><td>평균값 정리와 이중시그마</td></tr>
+        <tr><td class="week">2회차</td><td>수학적 귀납법과 점화식(1)</td></tr>
+        <tr><td class="week">3회차</td><td>피보나치 수열과 어려운 점화식(2)</td></tr>
+        <tr><td class="week">4회차</td><td>간단한 함수방정식과 그 접근 (심화)</td></tr>
+    </table>
+
+    <div class="cta-area">
+        <p><strong>• 수업 흐름</strong></p>
+        <p>테스트(60분) → 과제 및 테스트 예시 피드백 및 이론 설명(60분) → 과제 풀이</p>
+        <p style="margin-top:20px; color:var(--d-gold); font-weight:700;">상담 문의: 062-955-9360</p>
+        <a href="tel:062-955-9360" class="btn-apply">수강 신청 및 전화 문의</a>
+    </div>
+</div>
+
+</body>
+</html>
