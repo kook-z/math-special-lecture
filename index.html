@@ -60,31 +60,44 @@
         .curriculum-table .week { width: 120px; font-weight: 700; color: var(--d-gold); text-align: center; background: #fdfdfd; }
 
         /* Footer CTA Area */
-        .cta-area { text-align: center; background: var(--d-navy); color: white; padding: 40px 20px; border-radius: 10px; margin-top: 40px; }
-        .cta-area p { font-size: 0.95em; margin: 8px 0; opacity: 0.9; }
+        .cta-area { text-align: center; background: var(--d-navy); color: white; padding: 40px 15px; border-radius: 10px; margin-top: 40px; }
         
-        /* Button Group Custom Style */
-        .btn-group { display: flex; gap: 12px; justify-content: center; margin-top: 25px; flex-wrap: wrap; }
-        .btn-apply { 
-            text-decoration: none; font-weight: 700; font-size: 1.05em; 
-            display: flex; align-items: center; justify-content: center; gap: 8px;
-            padding: 18px 30px; border-radius: 6px; transition: 0.3s; 
-            flex: 1; min-width: 240px; max-width: 300px;
+        /* 🔥 버튼 그룹 수정 (모바일 대응) */
+        .btn-group { 
+            display: flex; 
+            gap: 10px; 
+            justify-content: center; 
+            margin: 25px auto 0 auto; 
+            max-width: 500px; /* PC에서도 너무 퍼지지 않게 제한 */
         }
-        .btn-apply.online { background: #fff; color: var(--d-navy); border: 1px solid #fff; }
-        .btn-apply.call { background: var(--d-gold); color: #white; border: 1px solid var(--d-gold); color: white; }
-        .btn-apply:hover { opacity: 0.85; transform: translateY(-2px); }
+        .btn-apply { 
+            text-decoration: none; font-weight: 700; font-size: 0.95em; 
+            display: flex; align-items: center; justify-content: center; gap: 6px;
+            padding: 15px 10px; border-radius: 6px; transition: 0.3s; 
+            flex: 1; /* 두 버튼이 똑같은 너비를 가짐 */
+        }
+        .btn-apply.online { background: #fff; color: var(--d-navy); }
+        .btn-apply.call { background: var(--d-gold); color: white; }
+        .btn-apply:hover { opacity: 0.9; transform: translateY(-2px); }
 
         /* Mobile Optimization */
         @media (max-width: 768px) {
-            .container { padding: 30px 20px; }
-            .top-header h1 { font-size: 1.8em; }
+            .container { padding: 30px 15px; }
+            .top-header h1 { font-size: 1.7em; }
             .profile-section { flex-direction: column; }
             .profile-img, .profile-info { width: 100%; }
             .profile-info { padding: 30px 20px; }
-            .info-summary, .strategy-grid { grid-template-columns: 1fr; }
-            .curriculum-table .week { width: 100px; font-size: 0.85em; }
-            .btn-apply { flex: none; width: 100%; max-width: 100%; }
+            .info-summary { grid-template-columns: 1fr; }
+            .strategy-grid { grid-template-columns: 1fr; }
+            
+            /* 모바일에서 버튼 너비와 글자 크기 미세 조정 */
+            .btn-apply { font-size: 0.9em; padding: 12px 5px; }
+        }
+
+        /* 아주 작은 화면 (아이폰 SE 등) 대응 */
+        @media (max-width: 360px) {
+            .btn-group { gap: 5px; }
+            .btn-apply { font-size: 0.8em; }
         }
     </style>
 </head>
@@ -93,7 +106,7 @@
 <div class="container">
     <header class="top-header">
         <p class="institute">"상위권으로 가는 지름길" 국희재수학전문학원</p>
-        <h1>(1월27일) 고3 수리논술 4주 특강</h1>
+        <h1>(1월27일 개강) 고3 수리논술 4주 특강</h1>
         <p class="subtitle">수능과는 다른 논술만의 '논리'를 완성합니다.</p>
     </header>
 
@@ -123,10 +136,11 @@
     <div class="info-summary">
         <div class="info-card">
             <strong>일시 및 범위</strong>
-            🚀 1월27일(화) 개강 (주1회 (화) 19:00~22:00)<br>
-            🚀 국희재수학 수완점(본관) 4층 <br>
+            🚀 1월27일(화) 개강 <br>
+            🚀 주1회 수업 (화) 19:00~22:00<br>
+            🚀 장소 : 국희재수학 수완점(본관) 4층 <br>
             🚀 범위 : 수학Ⅰ + 수학Ⅱ 핵심 테마<br>
-            🚀 수강료 : 재원생 20만원 / 비원생 25만원 (4회 기준)
+            🚀 수강료 : 재원생 20만원 / 비원생 25만원
         </div>
         <div class="info-card">
             <strong>학습 자료</strong>
@@ -156,23 +170,23 @@
         <tr><td class="week">1회차 (1/27)</td><td>평균값 정리와 이중시그마</td></tr>
         <tr><td class="week">2회차 (2/3)</td><td>수학적 귀납법과 점화식(1)</td></tr>
         <tr><td class="week">3회차 (2/10)</td><td>피보나치 수열과 어려운 점화식(2)</td></tr>
-        <tr><td class="week">4회차 (2/24)</td><td>간단한 함수방정식과 그 접근 (4회차는 내용 변경 가능)</td></tr>
+        <tr><td class="week">4회차 (2/24)</td><td>간단한 함수방정식과 그 접근</td></tr>
     </table>
     <p style="font-size: 0.9em; color: #666; margin-bottom: 40px;">* 2월 17일은 설 연휴로 수업이 진행되지 않습니다.</p>
 
     <div class="cta-area">
-        <p><strong>• 수업 흐름: 테스트(60분) → 피드백 및 이론 설명 → 과제풀이</strong></p>
+        <p><strong>• 수업 흐름: 테스트 → 피드백 및 이론 설명 → 과제풀이</strong></p>
         
         <div class="btn-group">
             <a href="https://naver.me/Fpx3mWcn" target="_blank" class="btn-apply online">
-                <span>📝</span> 온라인 수강 신청
+                <span>📝</span> 온라인 신청
             </a>
             <a href="tel:062-955-9360" class="btn-apply call">
-                <span>📞</span> 전화 상담 문의
+                <span>📞</span> 전화 문의
             </a>
         </div>
         
-        <p style="margin-top:25px; color:var(--d-gold); font-weight:700; font-size: 1.1em;">
+        <p style="margin-top:25px; color:var(--d-gold); font-weight:700; font-size: 1.05em;">
             국희재수학전문학원 수완본관: 062-955-9360
         </p>
     </div>
@@ -180,4 +194,3 @@
 
 </body>
 </html>
-
