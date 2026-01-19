@@ -30,4 +30,153 @@
         .profile-info { width: 55%; padding: 40px; box-sizing: border-box; }
         .profile-info .name { font-size: 2em; font-weight: 700; margin-bottom: 5px; }
         .profile-info .name span { font-size: 0.7em; font-weight: 500; margin-left: 8px; color: var(--d-gold); }
-        .profile-info .tagline { color: var(--d-gold); font-size: 1.1em; font-weight: 500; margin-bottom: 20px; border-bottom: 1px solid rgba(184, 155, 94, 0.3); display: inline-block; padding-bottom
+        .profile-info .tagline { color: var(--d-gold); font-size: 1.1em; font-weight: 500; margin-bottom: 20px; border-bottom: 1px solid rgba(184, 155, 94, 0.3); display: inline-block; padding-bottom: 5px; }
+        .career-list { list-style: none; padding: 0; margin: 0; }
+        .career-list li { margin-bottom: 10px; font-size: 1em; font-weight: 300; opacity: 0.9; }
+        .career-list li strong { color: var(--d-gold); font-weight: 700; }
+
+        /* Section Styling */
+        .essay-importance { background: var(--d-gray); padding: 30px; border-radius: 10px; margin-bottom: 50px; text-align: center; border-left: 6px solid var(--d-navy); }
+        .essay-importance h2 { color: var(--d-navy); font-size: 1.5em; margin-top: 0; margin-bottom: 15px; }
+        .essay-importance p { font-size: 1em; color: #444; max-width: 700px; margin: 0 auto; line-height: 1.6; }
+
+        .section-h3 { font-size: 1.5em; font-weight: 700; color: var(--d-navy); margin-bottom: 20px; display: flex; align-items: center; }
+        .section-h3::before { content: ""; width: 4px; height: 20px; background: var(--d-gold); margin-right: 12px; }
+
+        /* Grid layouts */
+        .info-summary { display: grid; grid-template-columns: 1fr 1fr; gap: 15px; margin-bottom: 40px; }
+        .info-card { padding: 20px; background: #fff; border: 1px solid #eee; border-radius: 8px; font-size: 0.95em; }
+        .info-card strong { color: var(--d-navy); display: block; margin-bottom: 8px; font-size: 1.1em; }
+
+        /* Strategy Grid */
+        .strategy-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 15px; margin-bottom: 50px; }
+        .strategy-item { background: white; padding: 20px; border-radius: 8px; border: 1px solid #eee; transition: 0.3s; }
+        .strategy-item h4 { color: var(--d-navy); margin-top: 0; font-size: 1.1em; margin-bottom: 10px; }
+        .strategy-item p { font-size: 0.85em; color: #666; margin-bottom: 0; line-height: 1.5; }
+
+        /* Curriculum Table */
+        .curriculum-table { width: 100%; border-top: 2px solid var(--d-navy); border-collapse: collapse; margin-bottom: 10px; }
+        .curriculum-table td { padding: 15px; border-bottom: 1px solid #eee; font-size: 0.95em; }
+        .curriculum-table .week { width: 120px; font-weight: 700; color: var(--d-gold); text-align: center; background: #fdfdfd; }
+
+        /* Footer CTA Area */
+        .cta-area { text-align: center; background: var(--d-navy); color: white; padding: 40px 20px; border-radius: 10px; margin-top: 40px; }
+        .cta-area p { font-size: 0.95em; margin: 8px 0; opacity: 0.9; }
+        
+        /* Button Group Custom Style */
+        .btn-group { display: flex; gap: 12px; justify-content: center; margin-top: 25px; flex-wrap: wrap; }
+        .btn-apply { 
+            text-decoration: none; font-weight: 700; font-size: 1.05em; 
+            display: flex; align-items: center; justify-content: center; gap: 8px;
+            padding: 18px 30px; border-radius: 6px; transition: 0.3s; 
+            flex: 1; min-width: 240px; max-width: 300px;
+        }
+        .btn-apply.online { background: #fff; color: var(--d-navy); border: 1px solid #fff; }
+        .btn-apply.call { background: var(--d-gold); color: #white; border: 1px solid var(--d-gold); color: white; }
+        .btn-apply:hover { opacity: 0.85; transform: translateY(-2px); }
+
+        /* Mobile Optimization */
+        @media (max-width: 768px) {
+            .container { padding: 30px 20px; }
+            .top-header h1 { font-size: 1.8em; }
+            .profile-section { flex-direction: column; }
+            .profile-img, .profile-info { width: 100%; }
+            .profile-info { padding: 30px 20px; }
+            .info-summary, .strategy-grid { grid-template-columns: 1fr; }
+            .curriculum-table .week { width: 100px; font-size: 0.85em; }
+            .btn-apply { flex: none; width: 100%; max-width: 100%; }
+        }
+    </style>
+</head>
+<body>
+
+<div class="container">
+    <header class="top-header">
+        <p class="institute">"상위권으로 가는 지름길" 국희재수학전문학원</p>
+        <h1>(1월27일) 고3 수리논술 4주 특강</h1>
+        <p class="subtitle">수능과는 다른 논술만의 '논리'를 완성합니다.</p>
+    </header>
+
+    <section class="profile-section">
+        <div class="profile-img"><img src="pt.jpg" alt="백윤성 선생님"></div>
+        <div class="profile-info">
+            <div class="name">백윤성 <span>T</span></div>
+            <div class="tagline">빈틈없는 관리 & 확실한 성적 향상</div>
+            <ul class="career-list">
+                <li>• 연세대학교 의과대학</li>
+                <li>• <strong>연세대학교 의과대학 수리논술 2회 합격</strong></li>
+                <li>• 현) (주)국희재수학 수리논술 팀장</li>
+            </ul>
+        </div>
+    </section>
+
+    <section class="essay-importance">
+        <h2>왜 지금 수리논술인가?</h2>
+        <p>
+            수리논술은 상위권 대학 진학을 위한 <strong>'가장 강력한 역전 카드'</strong>입니다. 
+            단순히 답을 맞히는 수능 수학을 넘어, 출제자의 의도를 파악하고 정교하게 논증하는 능력이 합격을 결정짓습니다. 
+            교과 원리를 완벽히 내면화하여 논리적 서술의 기초를 닦아야 할 골든 타임입니다.
+        </p>
+    </section>
+
+    <h3 class="section-h3">수업 안내</h3>
+    <div class="info-summary">
+        <div class="info-card">
+            <strong>일시 및 범위</strong>
+            🚀 1월27일(화) 개강 (주1회 (화) 19:00~22:00)<br>
+            🚀 국희재수학 수완점(본관) 4층 <br>
+            🚀 범위 : 수학Ⅰ + 수학Ⅱ 핵심 테마<br>
+            🚀 수강료 : 재원생 20만원 / 비원생 25만원 (4회 기준)
+        </div>
+        <div class="info-card">
+            <strong>학습 자료</strong>
+            수리논술 전용 워크북 제공 <br>
+            (수업 전 주 배포 원칙 / 1회차는 당일 배포)
+        </div>
+    </div>
+
+    <h3 class="section-h3">3단계 밀착 시스템</h3>
+    <div class="strategy-grid">
+        <div class="strategy-item">
+            <h4>1. 실전 테스트 & 피드백</h4>
+            <p>매주 1시간 테스트 진행. 우수 사례와 보완 사례를 대조하며 실시간으로 방향성을 제시합니다.</p>
+        </div>
+        <div class="strategy-item">
+            <h4>2. 원리 중심 이론 강의</h4>
+            <p>단순 암기가 아닌, 논리적 증명 과정의 빈틈을 채우는 필기 중심의 심화 이론 수업입니다.</p>
+        </div>
+        <div class="strategy-item">
+            <h4>3. 비대면 1:1 화상 첨삭</h4>
+            <p>백윤성T가 직접 진행하는 개인별 맞춤 교정. Google Meet을 통해 정밀 피드백이 이루어집니다.</p>
+        </div>
+    </div>
+
+    <h3 class="section-h3">4주 커리큘럼</h3>
+    <table class="curriculum-table">
+        <tr><td class="week">1회차 (1/27)</td><td>평균값 정리와 이중시그마</td></tr>
+        <tr><td class="week">2회차 (2/3)</td><td>수학적 귀납법과 점화식(1)</td></tr>
+        <tr><td class="week">3회차 (2/10)</td><td>피보나치 수열과 어려운 점화식(2)</td></tr>
+        <tr><td class="week">4회차 (2/24)</td><td>간단한 함수방정식과 그 접근 (내용 변경 가능)</td></tr>
+    </table>
+    <p style="font-size: 0.9em; color: #666; margin-bottom: 40px;">* 2월 17일은 설 연휴로 수업이 진행되지 않습니다.</p>
+
+    <div class="cta-area">
+        <p><strong>수업 흐름: 테스트(60분) → 피드백 및 이론 설명 → 과제풀이</strong></p>
+        
+        <div class="btn-group">
+            <a href="https://naver.me/Fpx3mWcn" target="_blank" class="btn-apply online">
+                <span>📝</span> 온라인 수강 신청
+            </a>
+            <a href="tel:062-955-9360" class="btn-apply call">
+                <span>📞</span> 전화 상담 문의
+            </a>
+        </div>
+        
+        <p style="margin-top:25px; color:var(--d-gold); font-weight:700; font-size: 1.1em;">
+            국희재수학 수완점: 062-955-9360
+        </p>
+    </div>
+</div>
+
+</body>
+</html>
