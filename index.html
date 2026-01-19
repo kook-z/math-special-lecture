@@ -8,8 +8,8 @@
         @import url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@300;400;500;700;900&display=swap');
         
         :root {
-            --d-navy: #0a192f;  /* 대치동 대형학원 시그니처 네이비 */
-            --d-gold: #b89b5e;  /* 고급스러운 골드 포인트 */
+            --d-navy: #0a192f;
+            --d-gold: #b89b5e;
             --d-gray: #f8f9fa;
             --text-black: #111;
         }
@@ -17,104 +17,16 @@
         body { font-family: 'Noto Sans KR', sans-serif; line-height: 1.7; color: var(--text-black); margin: 0; padding: 0; background-color: #fff; }
         .container { max-width: 900px; margin: 0 auto; padding: 60px 20px; }
 
-        /* Top Banner */
+        /* Header */
         .top-header { text-align: center; margin-bottom: 60px; }
         .top-header .institute { color: var(--d-gold); font-weight: 700; letter-spacing: 2px; font-size: 1.1em; }
         .top-header h1 { font-size: 3em; font-weight: 900; margin: 10px 0; color: var(--d-navy); letter-spacing: -1px; }
         .top-header .subtitle { font-size: 1.2em; color: #666; font-weight: 300; }
 
-        /* Instructor Profile Section */
-        .profile-section { display: flex; background: var(--d-navy); color: white; border-radius: 2px; overflow: hidden; margin-bottom: 80px; box-shadow: 20px 20px 0px var(--d-gray); }
+        /* Instructor Profile */
+        .profile-section { display: flex; background: var(--d-navy); color: white; border-radius: 2px; overflow: hidden; margin-bottom: 60px; box-shadow: 20px 20px 0px var(--d-gray); }
         .profile-img { width: 45%; line-height: 0; }
-        .profile-img img { width: 100%; height: 100%; object-fit: cover; filter: brightness(1.05); }
-        
-        .profile-info { width: 55%; padding: 50px; position: relative; }
+        .profile-img img { width: 100%; height: 100%; object-fit: cover; }
+        .profile-info { width: 55%; padding: 50px; }
         .profile-info .name { font-size: 2.2em; font-weight: 700; margin-bottom: 5px; }
-        .profile-info .name span { font-size: 0.5em; font-weight: 300; margin-left: 10px; opacity: 0.8; }
-        .profile-info .tagline { color: var(--d-gold); font-size: 1.1em; font-weight: 500; margin-bottom: 30px; border-bottom: 1px solid rgba(184, 155, 94, 0.3); display: inline-block; padding-bottom: 5px; }
-        
-        .career-list { list-style: none; padding: 0; }
-        .career-list li { margin-bottom: 12px; font-size: 1.05em; font-weight: 300; }
-        .career-list li strong { color: var(--d-gold); font-weight: 700; }
-
-        /* Content Sections */
-        .section-h3 { font-size: 1.8em; font-weight: 700; color: var(--d-navy); margin-bottom: 25px; display: flex; align-items: center; }
-        .section-h3::before { content: ""; width: 4px; height: 25px; background: var(--d-gold); margin-right: 15px; }
-
-        .curriculum-table { width: 100%; border-top: 2px solid var(--d-navy); border-collapse: collapse; margin-bottom: 60px; }
-        .curriculum-table td { padding: 20px; border-bottom: 1px solid #eee; }
-        .curriculum-table .week { width: 80px; font-weight: 700; color: var(--d-gold); text-align: center; }
-        .curriculum-table .subject { font-weight: 500; font-size: 1.1em; }
-
-        /* System Grid */
-        .system-box { display: grid; grid-template-columns: 1fr 1fr; gap: 30px; margin-bottom: 80px; }
-        .system-item { background: var(--d-gray); padding: 35px; border-radius: 5px; }
-        .system-item h4 { font-size: 1.3em; margin-top: 0; color: var(--d-navy); }
-        .system-item p { font-size: 0.95em; color: #444; margin-bottom: 0; }
-
-        /* Footer / CTA */
-        .cta-area { text-align: center; background: var(--d-gray); padding: 60px; border-radius: 5px; }
-        .cta-area p { font-size: 1.1em; margin-bottom: 30px; }
-        .btn-apply { background: var(--d-navy); color: white; padding: 20px 60px; text-decoration: none; font-weight: 700; font-size: 1.2em; transition: 0.3s; display: inline-block; }
-        .btn-apply:hover { background: var(--d-gold); }
-
-        @media (max-width: 768px) {
-            .profile-section { flex-direction: column; }
-            .profile-img, .profile-info { width: 100%; }
-            .system-box { grid-template-columns: 1fr; }
-        }
-    </style>
-</head>
-<body>
-
-<div class="container">
-    <header class="top-header">
-        <p class="institute">KOOKHEJAE MATHEMATICS PRESTIGE</p>
-        <h1>수리논술 4주 완성 특강</h1>
-        <p class="subtitle">대치동 입시 전략을 국희재에서 경험하십시오.</p>
-    </header>
-
-    <section class="profile-section">
-        <div class="profile-img">
-            <img src="백윤성t.jpg" alt="백성윤 선생님">
-        </div>
-        <div class="profile-info">
-            <div class="name">백성윤 <span>T</span></div>
-            <div class="tagline">빈틈없는 관리 & 확실한 성적 향상</div>
-            <ul class="career-list">
-                <li>• 연세대학교 의과대학</li>
-                <li>• <strong>연세대학교 의과대학 수리논술 2회 합격</strong></li>
-                <li>• 현) (주)국희재수학 수리논술 팀장</li>
-                <li>• 현) 대입 수리논술 전문 강사</li>
-            </ul>
-        </div>
-    </section>
-
-    <h3 class="section-h3">Curriculum</h3>
-    <table class="curriculum-table">
-        <tr><td class="week">WEEK 1</td><td class="subject">평균값 정리와 이중시그마</td></tr>
-        <tr><td class="week">WEEK 2</td><td class="subject">수학적 귀납법과 점화식(1)</td></tr>
-        <tr><td class="week">WEEK 3</td><td class="subject">피보나치 수열과 어려운 점화식(2)</td></tr>
-        <tr><td class="week">WEEK 4</td><td class="subject">함수방정식의 논리적 접근과 실전 적용</td></tr>
-    </table>
-
-    <h3 class="section-h3">Management System</h3>
-    <div class="system-box">
-        <div class="system-item">
-            <h4>사례 중심 피드백 수업</h4>
-            <p>매주 학생들의 실제 답안을 수거·촬영하여, 합격하는 답안과 감점되는 답안의 차이를 실시간으로 분석합니다.</p>
-        </div>
-        <div class="system-item">
-            <h4>1:1 화상 심화 첨삭</h4>
-            <p>수/목 심야 시간, Google Meet를 통해 백성윤 선생님이 직접 개별 지도를 진행합니다. 논증의 빈틈을 메우는 굵직한 피드백이 제공됩니다.</p>
-        </div>
-    </div>
-
-    <div class="cta-area">
-        <p><strong>2월 초 대개강</strong> | 화요일 저녁 7:00 - 10:00 (4주 특강)</p>
-        <a href="tel:010-0000-0000" class="btn-apply">수강 신청 및 상담 문의</a>
-    </div>
-</div>
-
-</body>
-</html>
+        .profile-info .tagline { color: var(--d-gold); font-size: 1.1em; font-weight:
